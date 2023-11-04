@@ -5,3 +5,5 @@ Project on the subject of Web application development
 2. Во вкладке игровая полка добавить текста в описание жанр.
 3. Добавить картинок.
 
+Вдохновение:
+https://thenvm.org/
