@@ -12,10 +12,50 @@
     <title>Игровая полка</title>
 </head>
 <body>
-<div class="wrapperGaming_shelf">
+<div class="wrapperGaming_shelf" id="wrapper">
     <header>
         <nav>
-            <img src="img/logo.png" alt="\Logo">
+            <img src="img/logo.png" alt="\Logo" onclick="changeTheme()">
+            <script>
+                //const themes = {"#00FF00" : "#FF00FF", }
+                const colors = ["#2c2b2b", "#ffffff"] //#101010
+                let i = 0;
+                const text = [
+                    document.getElementsByTagName("p"),
+                    document.getElementsByTagName("li"),
+                    document.getElementsByTagName("h1"),
+                    document.getElementsByTagName("h2")
+                ];
+
+                function changeTheme() {
+                    const wrapper = document.getElementById("wrapper");
+                    const box = document.getElementById("box");
+
+                    wrapper.style.backgroundColor = colors[i]
+                    if (colors[i] === "#ffffff") {
+                        box.style.backgroundColor = "#f2f2f2"
+                        for (const mass of text) {
+                            for (const element of mass) {
+                                element.style.color = "#000000";
+                            }
+                        }
+
+                    } else {
+                        box.style.backgroundColor = "#101010";
+                        for (const mass of text) {
+                            for (const element of mass) {
+                                element.style.color = "#ffffff";
+                            }
+                        }
+                    }
+                    i++;
+
+                    if (i === colors.length) {
+                        i = 0;
+                    }
+                }
+
+            </script>
             <ul>
                 <!--                    <a href="articles.html">Статьи</a>-->
                 <li><a href="index.html">Главная</a></li>
@@ -24,9 +64,10 @@
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
         </nav>
+
     </header>
     <main>
-        <div class="externalBox">
+        <div class="externalBox" id="box">
             <h1>Игровая полка</h1>
             <div class="genre">
                 <h2>Экшен</h2>

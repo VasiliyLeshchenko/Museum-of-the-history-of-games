@@ -22,6 +22,7 @@
     <header>
         <nav>
             <img src="img/logo.png" alt="\Logo">
+
             <ul>
                 <!--                    <a href="articles.html">Статьи</a>-->
                 <li><a href="index.html">Главная</a></li>
@@ -33,12 +34,23 @@
     </header>
     <main>
         <div class="externalBox">
-            <div class="contact-info">
+            <div class="contact-info" onclick="changeOrientation(this)">
                 <h1>Контакты</h1>
                 <p>Адрес: планета Нибиру, аглм. 666, к. 578-k</p>
                 <p>Телефон: 8-800-555-35-35</p>
                 <p>Email: bettercallsaul@problem.money</p>
             </div>
+            <script>
+                const orientations = ["left", "right", "center"]
+                let i = 0;
+                function changeOrientation(div) {
+                    div.style.textAlign = orientations[i];
+                    i++;
+                    if (i == orientations.length) {
+                        i = 0;
+                    }
+                }
+            </script>
         </div>
     </main>
     <footer>

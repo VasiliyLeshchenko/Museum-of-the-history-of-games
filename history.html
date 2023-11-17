@@ -27,7 +27,29 @@
             </div>-->
 <!--            <nav class="side-menu">-->
             <nav>
-                <img src="img/logo.png" alt="\Logo">
+                <img src="img/logo.png" alt="\Logo" onclick="changeColor()">
+                <script>
+                    const colors = ["#00FF00", "#00d4ff", "#FFFF00"];
+                    let i = 0;
+
+                    function changeColor() {
+                        const boxes = document.getElementsByClassName("box");
+                        const h1 = document.getElementsByTagName("h1");
+
+                        for (const box of boxes) {
+                            box.style.backgroundColor = colors[i];
+                        }
+
+                        for (const h of h1) {
+                            h.style.backgroundColor = colors[i];
+                        }
+                        i++;
+                        if (i === colors.length) {
+                            i = 0;
+                        }
+                    }
+
+                </script>
                 <ul>
                     <!--                    <a href="articles.html">Статьи</a>-->
                     <li><a href="index.html">Главная</a></li>
