@@ -350,8 +350,7 @@ footer a:hover {
     text-align: center;
     background-color: rgba(39, 36, 36, 0.5);
     color: #f2f2f2;
-    padding: 20px; /* Add padding as needed */
-    /* Optionally, you can set a fixed width or max-width for .externalBox if desired */
+    padding: 20px;
 }
 
 iframe {
