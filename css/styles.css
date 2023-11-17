@@ -346,10 +346,17 @@ footer a:hover {
 }
 
 .wrapperContacts .externalBox {
-    margin: 150px auto 100px auto;
+    margin: 0 auto 0 auto;
     text-align: center;
     background-color: rgba(39, 36, 36, 0.5);
     color: #f2f2f2;
     padding: 20px; /* Add padding as needed */
     /* Optionally, you can set a fixed width or max-width for .externalBox if desired */
+}
+
+iframe {
+    width: 640px;
+    height: 685px;
+    max-width: 100%;
+    background-color: rgba(216, 214, 214, 0.6);
 }
