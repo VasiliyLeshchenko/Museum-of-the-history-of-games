@@ -21,7 +21,27 @@
 <div class="wrapperIndex">
     <header>
         <nav>
-            <img src="img/logo.png" alt="\Logo">
+            <img src="img/logo.png" alt="\Logo" onclick="changeColor(this)">
+            <script>
+                const colors = ["#00FF00", "#FF0000", "#FFFF00"];
+                const text = [ document.getElementsByTagName("p"),
+                    document.getElementsByTagName("h1"),
+                    document.getElementsByTagName("h2")];
+                let i = 0;
+                function changeColor(img) {
+                    img.style.backgroundColor = colors[i];
+                    const r = "#" + Math.floor(Math.random()*16777215).toString(16);
+                        for (const mass of text) {
+                            for (const element of mass) {
+                                element.style.color = r;
+                            }
+                        }
+                    i++;
+                    if (i === colors.length) {
+                        i = 0;
+                    }
+                }
+            </script>
             <ul>
                 <!--                    <a href="articles.html">Статьи</a>-->
                 <li><a class="active" href="index.html">Главная</a></li>
