@@ -35,7 +35,8 @@
     <main>
         <div class="externalBox">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSceZAx4lU9fpO_krI1XbssSNl_gV99yxshriP4VnK7UfPrbkQ/viewform?embedded=true" >Загрузка…</iframe>
-                <!--<div class="contact-info" onclick="changeOrientation(this)">
+
+            <!--<div class="contact-info" onclick="changeOrientation(this)">
                 <h1>Контакты</h1>
                 <p>Адрес: планета Нибиру, аглм. 666, к. 578-k</p>
                 <p>Телефон: 8-800-555-35-35</p>
@@ -53,6 +54,26 @@
                 }
             </script>-->
         </div>
+        <div class="bot-container">
+            <button id="toggleBotButton" onclick="toggleBot()">Collapse</button>
+            <div id="chat" class="chat-box">
+                <p>Приветствую, я Чат-бот!</p>
+                <p>Доступные команды:</p>
+                <ul>
+                    <li>о сайте - Описание сайта, его цели.</li>
+                    <li>отзывы - Как оставить отзыв о сайте.</li>
+                    <li>контакты - Как вы сможете с нами связаться.</li>
+                    <li>помощь - Список команд.</li>
+                </ul>
+            </div>
+            <div class="button-container">
+                <input type="text" id="messageInput" class="message-input" placeholder="Type your message...">
+                <button onclick="sendMessage()" class="send-button">Send</button>
+                <button onclick="clearChat()" class="clear-button">Clear</button>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+        <script src="js/client.js"></script>
     </main>
     <footer>
         <h3>Контакты</h3>
